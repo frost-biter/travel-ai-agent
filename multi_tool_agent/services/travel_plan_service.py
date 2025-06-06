@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from .weather_service import WeatherService
 from .flight_service import FlightService
 from .hotel_service import HotelService
+from .hotel_service import HotelSource
 
 class TravelPlanService:
     """Service for collecting travel plan data for AI evaluation."""
@@ -41,8 +42,12 @@ class TravelPlanService:
         # Get flight options
         flight_offers = self.flight_service.search_flights(origin, destination, start_date, adults)
         
-        # Get hotel options
-        hotel_offers = self.hotel_service.search_hotels(destination, start_date, end_date, adults)
+        # Get hotel options (using new API parameters)
+        hotel_offers = self.hotel_service.search_hotels(
+            city_code=destination,
+            radius=50,  # Default to 50km radius
+            hotel_source=HotelSource.ALL
+        )
         
         # Calculate trip duration
         start = datetime.strptime(start_date, "%Y-%m-%d")
@@ -65,43 +70,19 @@ class TravelPlanService:
         # Organize hotel data
         hotel_data = []
         for hotel in hotel_offers:
-            hotel_offers_list = []
-            for offer in hotel.get("offers", []):
-                hotel_offers_list.append({
-                    "room_type": offer.get("room", {}).get("type"),
-                    "price_per_night": offer.get("price", {}).get("total"),
-                    "currency": offer.get("price", {}).get("currency", "USD"),
-                    "board_type": offer.get("board_type"),
-                    "cancellation_policy": offer.get("policies", {}).get("cancellation")
-                })
-            
             hotel_data.append({
+                "hotelId": hotel.get("hotelId"),
                 "name": hotel.get("name"),
                 "rating": hotel.get("rating"),
                 "location": {
                     "address": hotel.get("address", {}).get("lines", []),
                     "city": hotel.get("address", {}).get("cityName"),
-                    "distance_to_center": hotel.get("distance_to_center")
+                    "distance": hotel.get("distance")
                 },
                 "amenities": hotel.get("amenities", []),
-                "offers": hotel_offers_list
+                "geoCode": hotel.get("geoCode")
             })
         
-        # Organize weather data
-        weather_details = []
-        for day in weather_data.get("forecast", []):
-            weather_details.append({
-                "date": day.get("date"),
-                "condition": day.get("condition"),
-                "max_temp": day.get("max_temp"),
-                "min_temp": day.get("min_temp"),
-                "chance_of_rain": day.get("chance_of_rain"),
-                "uv_index": day.get("uv"),
-                "sunrise": day.get("sunrise"),
-                "sunset": day.get("sunset")
-            })
-        
-        # Return comprehensive data for AI evaluation
         return {
             "trip_details": {
                 "origin": origin,
@@ -109,17 +90,10 @@ class TravelPlanService:
                 "start_date": start_date,
                 "end_date": end_date,
                 "duration_days": duration,
-                "travelers": adults,
+                "adults": adults,
                 "max_budget": max_budget
             },
-            "weather_data": {
-                "location": weather_data.get("location"),
-                "daily_forecast": weather_details
-            },
-            "transportation": {
-                "flights": flight_data
-            },
-            "accommodation": {
-                "hotels": hotel_data
-            }
+            "weather": weather_data,
+            "flights": flight_data,
+            "hotels": hotel_data
         } 

@@ -28,8 +28,9 @@ class AmadeusClient(BaseAPIClient):
             response = super()._make_request(
                 method="POST",
                 endpoint="/v1/security/oauth2/token",
-                headers=headers,
-                data=data
+                headers=headers,    
+                data=data,
+                is_form_data=True  # Use form-encoded data
             )
             self._access_token = response["access_token"]
             return self._access_token
