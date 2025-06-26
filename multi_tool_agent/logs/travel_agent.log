@@ -3380,3 +3380,1191 @@ Traceback (most recent call last):
   File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_tool_agent\services\base_client.py", line 90, in _make_request
     raise Exception(error_msg)
 Exception: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BUD&departureDate=2024-11-01&adults=2
+2025-06-26 22:35:05,722 - travel_agent - INFO - Travel Services Agent initialized successfully
+2025-06-26 22:35:17,658 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 22:35:17,667 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /forecast.json
+Params: {'q': 'Mumbai', 'days': 5, 'aqi': 'no', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 22:35:18,151 - travel_agent - DEBUG - WeatherService Response - Status: 200
+URL: http://api.weatherapi.com/v1/forecast.json?q=Mumbai&days=5&aqi=no&key=fb184594e2e2401a885105921250406
+2025-06-26 22:35:24,209 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-27
+2025-06-26 22:35:24,231 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:35:24,249 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-27
+2025-06-26 22:35:24,275 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:35:25,711 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:35:25,713 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-27', 'adults': 1}
+Headers: {'Authorization': 'Bearer toPJQdF0nR8auWRwa2BNvLnyb1CH'}
+Data: None
+Form Data: False
+2025-06-26 22:35:28,690 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-27&adults=1
+2025-06-26 22:35:28,726 - travel_agent - INFO - Found 98 flight offers
+2025-06-26 22:35:28,729 - travel_agent - INFO - Successfully retrieved 98 flight offers
+2025-06-26 22:35:28,734 - travel_agent - INFO - Tool: get_flight_offers called for BOM to DEL on 2025-06-30
+2025-06-26 22:35:28,740 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:35:28,743 - travel_agent - INFO - Searching flights from BOM to DEL on 2025-06-30
+2025-06-26 22:35:28,747 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:35:29,612 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:35:29,616 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'BOM', 'destinationLocationCode': 'DEL', 'departureDate': '2025-06-30', 'adults': 1}
+Headers: {'Authorization': 'Bearer YDEOaTIERCZHkqvPlsG3tC6rrjJs'}
+Data: None
+Form Data: False
+2025-06-26 22:35:33,023 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOM&destinationLocationCode=DEL&departureDate=2025-06-30&adults=1
+2025-06-26 22:35:33,044 - travel_agent - INFO - Found 89 flight offers
+2025-06-26 22:35:33,051 - travel_agent - INFO - Successfully retrieved 89 flight offers
+2025-06-26 22:36:32,512 - travel_agent - INFO - Tool: get_flight_offers called for BOM to DEL on 2025-07-01
+2025-06-26 22:36:32,515 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:36:32,516 - travel_agent - INFO - Searching flights from BOM to DEL on 2025-07-01
+2025-06-26 22:36:32,519 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:36:33,780 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:36:33,786 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'BOM', 'destinationLocationCode': 'DEL', 'departureDate': '2025-07-01', 'adults': 1}
+Headers: {'Authorization': 'Bearer zhau7A6WxNoRMyXmeirFq0R3MPtv'}
+Data: None
+Form Data: False
+2025-06-26 22:36:36,342 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOM&destinationLocationCode=DEL&departureDate=2025-07-01&adults=1
+2025-06-26 22:36:36,360 - travel_agent - INFO - Found 102 flight offers
+2025-06-26 22:36:36,360 - travel_agent - INFO - Successfully retrieved 102 flight offers
+2025-06-26 22:36:36,370 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-28
+2025-06-26 22:36:36,370 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:36:36,373 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-28
+2025-06-26 22:36:36,373 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:36:37,115 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:36:37,124 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-28', 'adults': 1}
+Headers: {'Authorization': 'Bearer 1IsdxdyjDuAsTgAeGclDNFkpouA7'}
+Data: None
+Form Data: False
+2025-06-26 22:36:39,737 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-28&adults=1
+2025-06-26 22:36:39,739 - travel_agent - INFO - Found 92 flight offers
+2025-06-26 22:36:39,754 - travel_agent - INFO - Successfully retrieved 92 flight offers
+2025-06-26 22:36:39,776 - travel_agent - INFO - Tool: get_flight_offers called for BOM to DEL on 2025-07-01
+2025-06-26 22:36:39,776 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:36:39,782 - travel_agent - INFO - Searching flights from BOM to DEL on 2025-07-01
+2025-06-26 22:36:39,782 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:36:40,563 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:36:40,568 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'BOM', 'destinationLocationCode': 'DEL', 'departureDate': '2025-07-01', 'adults': 1}
+Headers: {'Authorization': 'Bearer BAKJHBdWua7rGbmWgTO5xVdjTdmW'}
+Data: None
+Form Data: False
+2025-06-26 22:36:42,916 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOM&destinationLocationCode=DEL&departureDate=2025-07-01&adults=1
+2025-06-26 22:36:42,947 - travel_agent - INFO - Found 102 flight offers
+2025-06-26 22:36:42,947 - travel_agent - INFO - Successfully retrieved 102 flight offers
+2025-06-26 22:36:42,955 - travel_agent - INFO - Tool: get_flight_offers called for BOM to DEL on 2025-07-02
+2025-06-26 22:36:42,957 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:36:42,959 - travel_agent - INFO - Searching flights from BOM to DEL on 2025-07-02
+2025-06-26 22:36:42,959 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:36:43,716 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:36:43,717 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'BOM', 'destinationLocationCode': 'DEL', 'departureDate': '2025-07-02', 'adults': 1}
+Headers: {'Authorization': 'Bearer Th0d7vwGCwdXPjAuGojJGMb3c56i'}
+Data: None
+Form Data: False
+2025-06-26 22:36:46,320 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOM&destinationLocationCode=DEL&departureDate=2025-07-02&adults=1
+2025-06-26 22:36:46,355 - travel_agent - INFO - Found 103 flight offers
+2025-06-26 22:36:46,355 - travel_agent - INFO - Successfully retrieved 103 flight offers
+2025-06-26 22:36:56,930 - travel_agent - INFO - Tool: get_hotel_offers called for BOM
+2025-06-26 22:36:56,932 - travel_agent - DEBUG - Initialized HotelService
+2025-06-26 22:36:56,938 - travel_agent - INFO - Searching hotels in BOM within 50 RadiusUnit.KM
+2025-06-26 22:36:56,944 - travel_agent - DEBUG - Added amenities filter: ['WIFI', 'SWIMMING_POOL']
+2025-06-26 22:36:56,946 - travel_agent - DEBUG - Added ratings filter: ['3', '4', '5']
+2025-06-26 22:36:56,946 - travel_agent - DEBUG - Searching with parameters: {'cityCode': 'BOM', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL', 'amenities': ['WIFI', 'SWIMMING_POOL'], 'ratings': ['3', '4', '5']}
+2025-06-26 22:36:56,948 - travel_agent - DEBUG - HotelService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:36:57,779 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:36:57,788 - travel_agent - DEBUG - HotelService Request - Method: GET, Endpoint: /v1/reference-data/locations/hotels/by-city
+Params: {'cityCode': 'BOM', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL', 'amenities': ['WIFI', 'SWIMMING_POOL'], 'ratings': ['3', '4', '5']}
+Headers: {'Authorization': 'Bearer brH1Ap961wAAqvD3uADjMQgxMvfG'}
+Data: None
+Form Data: False
+2025-06-26 22:36:59,010 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=BOM&radius=50&radiusUnit=KM&hotelSource=ALL&amenities=WIFI&amenities=SWIMMING_POOL&ratings=3&ratings=4&ratings=5
+2025-06-26 22:36:59,014 - travel_agent - DEBUG - Parsing 8 hotels
+2025-06-26 22:36:59,430 - travel_agent - INFO - Successfully retrieved 8 hotels
+2025-06-26 22:43:16,436 - travel_agent - INFO - Multi-Agent Travel Services Root Agent initialized successfully
+2025-06-26 22:47:06,576 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-24
+2025-06-26 22:47:06,653 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:47:06,672 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-24
+2025-06-26 22:47:06,687 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:47:07,965 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:47:07,994 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-24', 'adults': 1}
+Headers: {'Authorization': 'Bearer mti5kcNyBxN7s0iEd3krAkCAP5jf'}
+Data: None
+Form Data: False
+2025-06-26 22:47:09,244 - travel_agent - DEBUG - FlightService Response - Status: 400
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+2025-06-26 22:47:09,331 - travel_agent - ERROR - FlightService Error - Status: 400
+Response: {"errors":[{"status":400,"code":425,"title":"INVALID DATE","detail":"Date/Time is in the past","source":{}}]}
+2025-06-26 22:47:09,390 - travel_agent - ERROR - FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+2025-06-26 22:47:09,510 - travel_agent - ERROR - Failed to search flights: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\flight_service.py", line 33, in search_flights
+    response = self._make_request("GET", "/v2/shopping/flight-offers", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\amadeus_client.py", line 49, in _make_request
+    return super()._make_request(method, endpoint, params=params, headers=headers, data=data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 90, in _make_request
+    raise Exception(error_msg)
+Exception: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+2025-06-26 22:47:09,589 - travel_agent - ERROR - Failed to get flight offers: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\tools\flight_tools.py", line 23, in get_flight_offers
+    offers = flight_service.search_flights(origin, destination, date, adults)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\flight_service.py", line 33, in search_flights
+    response = self._make_request("GET", "/v2/shopping/flight-offers", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\amadeus_client.py", line 49, in _make_request
+    return super()._make_request(method, endpoint, params=params, headers=headers, data=data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 90, in _make_request
+    raise Exception(error_msg)
+Exception: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-24&adults=1
+2025-06-26 22:47:09,683 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-25
+2025-06-26 22:47:09,751 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:47:09,761 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-25
+2025-06-26 22:47:09,771 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:47:10,844 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:47:10,853 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-25', 'adults': 1}
+Headers: {'Authorization': 'Bearer hRSF0T9oKJY3uOEOQzJxZvlXVcGw'}
+Data: None
+Form Data: False
+2025-06-26 22:47:12,379 - travel_agent - DEBUG - FlightService Response - Status: 400
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+2025-06-26 22:47:12,415 - travel_agent - ERROR - FlightService Error - Status: 400
+Response: {"errors":[{"status":400,"code":425,"title":"INVALID DATE","detail":"Date/Time is in the past","source":{}}]}
+2025-06-26 22:47:12,555 - travel_agent - ERROR - FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+2025-06-26 22:47:12,686 - travel_agent - ERROR - Failed to search flights: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\flight_service.py", line 33, in search_flights
+    response = self._make_request("GET", "/v2/shopping/flight-offers", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\amadeus_client.py", line 49, in _make_request
+    return super()._make_request(method, endpoint, params=params, headers=headers, data=data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 90, in _make_request
+    raise Exception(error_msg)
+Exception: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+2025-06-26 22:47:12,839 - travel_agent - ERROR - Failed to get flight offers: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\tools\flight_tools.py", line 23, in get_flight_offers
+    offers = flight_service.search_flights(origin, destination, date, adults)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\flight_service.py", line 33, in search_flights
+    response = self._make_request("GET", "/v2/shopping/flight-offers", params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\amadeus_client.py", line 49, in _make_request
+    return super()._make_request(method, endpoint, params=params, headers=headers, data=data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 90, in _make_request
+    raise Exception(error_msg)
+Exception: FlightService API request failed: 400 Client Error: Bad Request for url: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-25&adults=1
+2025-06-26 22:47:13,039 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-26
+2025-06-26 22:47:13,170 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:47:13,188 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-26
+2025-06-26 22:47:13,381 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:47:14,733 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:47:14,783 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-26', 'adults': 1}
+Headers: {'Authorization': 'Bearer fm1x5g2F2NcCNZHDnkyImyLuYNop'}
+Data: None
+Form Data: False
+2025-06-26 22:47:16,579 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-26&adults=1
+2025-06-26 22:47:16,696 - travel_agent - INFO - Found 0 flight offers
+2025-06-26 22:47:16,921 - travel_agent - INFO - Successfully retrieved 0 flight offers
+2025-06-26 22:47:17,069 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-27
+2025-06-26 22:47:17,100 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:47:17,104 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-27
+2025-06-26 22:47:17,128 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:47:18,000 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:47:18,002 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-27', 'adults': 1}
+Headers: {'Authorization': 'Bearer GjGzDizYxGesQO5jV79NtfbIGr0K'}
+Data: None
+Form Data: False
+2025-06-26 22:47:20,895 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-27&adults=1
+2025-06-26 22:47:21,475 - travel_agent - INFO - Found 98 flight offers
+2025-06-26 22:47:21,516 - travel_agent - INFO - Successfully retrieved 98 flight offers
+2025-06-26 22:47:21,592 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-28
+2025-06-26 22:47:21,628 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 22:47:21,654 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-28
+2025-06-26 22:47:21,718 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 22:47:22,595 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 22:47:22,629 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-28', 'adults': 1}
+Headers: {'Authorization': 'Bearer 0YlSUbFyV7HDQ59WHle5RRGcCjTx'}
+Data: None
+Form Data: False
+2025-06-26 22:47:25,574 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-28&adults=1
+2025-06-26 22:47:25,627 - travel_agent - INFO - Found 92 flight offers
+2025-06-26 22:47:25,701 - travel_agent - INFO - Successfully retrieved 92 flight offers
+2025-06-26 23:09:59,471 - travel_agent - INFO - Travel Services Agent initialized successfully
+2025-06-26 23:10:07,987 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-27
+2025-06-26 23:10:08,005 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:10:08,007 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-27
+2025-06-26 23:10:08,013 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:10:09,159 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:10:09,161 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-27', 'adults': 1}
+Headers: {'Authorization': 'Bearer pjwVzsZJm1dBOGc5foEq2jtDYCiC'}
+Data: None
+Form Data: False
+2025-06-26 23:10:11,815 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-27&adults=1
+2025-06-26 23:10:11,825 - travel_agent - INFO - Found 98 flight offers
+2025-06-26 23:10:11,830 - travel_agent - INFO - Successfully retrieved 98 flight offers
+2025-06-26 23:10:11,842 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-28
+2025-06-26 23:10:11,844 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:10:11,844 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-28
+2025-06-26 23:10:11,844 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:10:12,589 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:10:12,590 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-28', 'adults': 1}
+Headers: {'Authorization': 'Bearer s4XjlPIKVF981gFbcFj58LQPQJPI'}
+Data: None
+Form Data: False
+2025-06-26 23:10:15,247 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-28&adults=1
+2025-06-26 23:10:15,259 - travel_agent - INFO - Found 92 flight offers
+2025-06-26 23:10:15,262 - travel_agent - INFO - Successfully retrieved 92 flight offers
+2025-06-26 23:10:15,267 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-29
+2025-06-26 23:10:15,273 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:10:15,274 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-29
+2025-06-26 23:10:15,275 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:10:16,382 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:10:16,382 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-29', 'adults': 1}
+Headers: {'Authorization': 'Bearer BE2FqFmXvv4iFUPaiP7GJxhGO4WZ'}
+Data: None
+Form Data: False
+2025-06-26 23:10:19,345 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-29&adults=1
+2025-06-26 23:10:19,354 - travel_agent - INFO - Found 89 flight offers
+2025-06-26 23:10:19,361 - travel_agent - INFO - Successfully retrieved 89 flight offers
+2025-06-26 23:10:19,363 - travel_agent - INFO - Tool: get_hotel_offers called for BOM
+2025-06-26 23:10:19,366 - travel_agent - DEBUG - Initialized HotelService
+2025-06-26 23:10:19,366 - travel_agent - INFO - Searching hotels in BOM within 50 RadiusUnit.KM
+2025-06-26 23:10:19,368 - travel_agent - DEBUG - Searching with parameters: {'cityCode': 'BOM', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+2025-06-26 23:10:19,371 - travel_agent - DEBUG - HotelService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:10:20,194 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:10:20,197 - travel_agent - DEBUG - HotelService Request - Method: GET, Endpoint: /v1/reference-data/locations/hotels/by-city
+Params: {'cityCode': 'BOM', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+Headers: {'Authorization': 'Bearer 9W9G1VGKznRB5AAgXAas3qS0TvoH'}
+Data: None
+Form Data: False
+2025-06-26 23:10:21,517 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=BOM&radius=50&radiusUnit=KM&hotelSource=ALL
+2025-06-26 23:10:21,523 - travel_agent - DEBUG - Parsing 91 hotels
+2025-06-26 23:10:23,707 - travel_agent - INFO - Successfully retrieved 91 hotels
+2025-06-26 23:22:57,950 - travel_agent - INFO - Tool: get_flight_offers called for BOM to DEL on 2025-06-30
+2025-06-26 23:22:57,958 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:22:57,958 - travel_agent - INFO - Searching flights from BOM to DEL on 2025-06-30
+2025-06-26 23:22:57,958 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:22:58,968 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:22:58,968 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'BOM', 'destinationLocationCode': 'DEL', 'departureDate': '2025-06-30', 'adults': 1}
+Headers: {'Authorization': 'Bearer FpRbG5N4YgxKLFSyODpRPSn2rXpq'}
+Data: None
+Form Data: False
+2025-06-26 23:23:01,848 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOM&destinationLocationCode=DEL&departureDate=2025-06-30&adults=1
+2025-06-26 23:23:01,857 - travel_agent - INFO - Found 89 flight offers
+2025-06-26 23:23:01,866 - travel_agent - INFO - Successfully retrieved 89 flight offers
+2025-06-26 23:23:01,870 - travel_agent - INFO - Tool: get_flight_offers called for BOM to DEL on 2025-07-01
+2025-06-26 23:23:01,876 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:23:01,876 - travel_agent - INFO - Searching flights from BOM to DEL on 2025-07-01
+2025-06-26 23:23:01,876 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:23:02,547 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:23:02,554 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'BOM', 'destinationLocationCode': 'DEL', 'departureDate': '2025-07-01', 'adults': 1}
+Headers: {'Authorization': 'Bearer wTKaRYALgDhQiZntSDl8y61RLLPL'}
+Data: None
+Form Data: False
+2025-06-26 23:23:05,048 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOM&destinationLocationCode=DEL&departureDate=2025-07-01&adults=1
+2025-06-26 23:23:05,063 - travel_agent - INFO - Found 102 flight offers
+2025-06-26 23:23:05,069 - travel_agent - INFO - Successfully retrieved 102 flight offers
+2025-06-26 23:23:05,073 - travel_agent - INFO - Tool: get_flight_offers called for BOM to DEL on 2025-07-02
+2025-06-26 23:23:05,079 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:23:05,079 - travel_agent - INFO - Searching flights from BOM to DEL on 2025-07-02
+2025-06-26 23:23:05,079 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:23:05,812 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:23:05,816 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'BOM', 'destinationLocationCode': 'DEL', 'departureDate': '2025-07-02', 'adults': 1}
+Headers: {'Authorization': 'Bearer GAwiRiWROM8o9tK5CtIqPodb4Awj'}
+Data: None
+Form Data: False
+2025-06-26 23:23:08,238 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BOM&destinationLocationCode=DEL&departureDate=2025-07-02&adults=1
+2025-06-26 23:23:08,250 - travel_agent - INFO - Found 103 flight offers
+2025-06-26 23:23:08,250 - travel_agent - INFO - Successfully retrieved 103 flight offers
+2025-06-26 23:25:28,774 - travel_agent - INFO - Tool: get_flight_offers called for DEL to BOM on 2025-06-27
+2025-06-26 23:25:28,774 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:25:28,774 - travel_agent - INFO - Searching flights from DEL to BOM on 2025-06-27
+2025-06-26 23:25:28,774 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:25:29,904 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:25:29,904 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'BOM', 'departureDate': '2025-06-27', 'adults': 1}
+Headers: {'Authorization': 'Bearer RzUgATWXpEfsBHHxyNWWAGyoBjHa'}
+Data: None
+Form Data: False
+2025-06-26 23:25:33,202 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=BOM&departureDate=2025-06-27&adults=1
+2025-06-26 23:25:33,215 - travel_agent - INFO - Found 98 flight offers
+2025-06-26 23:25:33,215 - travel_agent - INFO - Successfully retrieved 98 flight offers
+2025-06-26 23:27:02,754 - travel_agent - INFO - Tool: get_flight_offers called for BLR to GOI on 2025-06-27
+2025-06-26 23:27:02,757 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:27:02,758 - travel_agent - INFO - Searching flights from BLR to GOI on 2025-06-27
+2025-06-26 23:27:02,758 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:27:03,588 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:27:03,589 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'BLR', 'destinationLocationCode': 'GOI', 'departureDate': '2025-06-27', 'adults': 1}
+Headers: {'Authorization': 'Bearer 7oWAnhMJ1HPnY4nzokgmbfrsIe5b'}
+Data: None
+Form Data: False
+2025-06-26 23:27:06,001 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BLR&destinationLocationCode=GOI&departureDate=2025-06-27&adults=1
+2025-06-26 23:27:06,001 - travel_agent - INFO - Found 21 flight offers
+2025-06-26 23:27:06,001 - travel_agent - INFO - Successfully retrieved 21 flight offers
+2025-06-26 23:27:06,012 - travel_agent - INFO - Tool: get_flight_offers called for GOI to BLR on 2025-06-30
+2025-06-26 23:27:06,012 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:27:06,012 - travel_agent - INFO - Searching flights from GOI to BLR on 2025-06-30
+2025-06-26 23:27:06,012 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:27:06,735 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:27:06,735 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'GOI', 'destinationLocationCode': 'BLR', 'departureDate': '2025-06-30', 'adults': 1}
+Headers: {'Authorization': 'Bearer KYeuIDu3Hi6feIn7cYcdOTxcFb9v'}
+Data: None
+Form Data: False
+2025-06-26 23:27:08,913 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=GOI&destinationLocationCode=BLR&departureDate=2025-06-30&adults=1
+2025-06-26 23:27:08,916 - travel_agent - INFO - Found 19 flight offers
+2025-06-26 23:27:08,916 - travel_agent - INFO - Successfully retrieved 19 flight offers
+2025-06-26 23:28:28,368 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-01
+2025-06-26 23:28:28,370 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:28,370 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-01
+2025-06-26 23:28:28,370 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:29,365 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:29,365 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-01', 'adults': 1}
+Headers: {'Authorization': 'Bearer jhhssgxS4ACQLus2dDdMsiXqOHg8'}
+Data: None
+Form Data: False
+2025-06-26 23:28:31,279 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-01&adults=1
+2025-06-26 23:28:31,286 - travel_agent - INFO - Found 24 flight offers
+2025-06-26 23:28:31,287 - travel_agent - INFO - Successfully retrieved 24 flight offers
+2025-06-26 23:28:31,287 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-02
+2025-06-26 23:28:31,287 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:31,287 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-02
+2025-06-26 23:28:31,287 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:32,019 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:32,021 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-02', 'adults': 1}
+Headers: {'Authorization': 'Bearer Q8vMSYgReLRQw4T6SyBv1Xuf6C0i'}
+Data: None
+Form Data: False
+2025-06-26 23:28:34,073 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-02&adults=1
+2025-06-26 23:28:34,077 - travel_agent - INFO - Found 15 flight offers
+2025-06-26 23:28:34,077 - travel_agent - INFO - Successfully retrieved 15 flight offers
+2025-06-26 23:28:34,077 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-03
+2025-06-26 23:28:34,082 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:34,082 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-03
+2025-06-26 23:28:34,084 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:34,847 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:34,856 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-03', 'adults': 1}
+Headers: {'Authorization': 'Bearer Vj8JmEGvGYzf6x5pQgNujnFrIGmg'}
+Data: None
+Form Data: False
+2025-06-26 23:28:36,997 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-03&adults=1
+2025-06-26 23:28:36,997 - travel_agent - INFO - Found 18 flight offers
+2025-06-26 23:28:37,007 - travel_agent - INFO - Successfully retrieved 18 flight offers
+2025-06-26 23:28:37,007 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-04
+2025-06-26 23:28:37,007 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:37,007 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-04
+2025-06-26 23:28:37,012 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:37,735 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:37,735 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-04', 'adults': 1}
+Headers: {'Authorization': 'Bearer a2z10XyvVmepmCi2Oz7qXok34Z5A'}
+Data: None
+Form Data: False
+2025-06-26 23:28:39,821 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-04&adults=1
+2025-06-26 23:28:39,823 - travel_agent - INFO - Found 23 flight offers
+2025-06-26 23:28:39,828 - travel_agent - INFO - Successfully retrieved 23 flight offers
+2025-06-26 23:28:39,837 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-05
+2025-06-26 23:28:39,837 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:39,837 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-05
+2025-06-26 23:28:39,844 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:40,533 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:40,533 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-05', 'adults': 1}
+Headers: {'Authorization': 'Bearer E8LUKIFxtN4IXkT6rn359VVgaQDA'}
+Data: None
+Form Data: False
+2025-06-26 23:28:44,418 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-05&adults=1
+2025-06-26 23:28:44,424 - travel_agent - INFO - Found 23 flight offers
+2025-06-26 23:28:44,424 - travel_agent - INFO - Successfully retrieved 23 flight offers
+2025-06-26 23:28:44,436 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-06
+2025-06-26 23:28:44,440 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:44,440 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-06
+2025-06-26 23:28:44,440 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:45,218 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:45,218 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-06', 'adults': 1}
+Headers: {'Authorization': 'Bearer 3uSqMgq3cUMZAcPOx283sWstIpDN'}
+Data: None
+Form Data: False
+2025-06-26 23:28:48,294 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-06&adults=1
+2025-06-26 23:28:48,294 - travel_agent - INFO - Found 24 flight offers
+2025-06-26 23:28:48,305 - travel_agent - INFO - Successfully retrieved 24 flight offers
+2025-06-26 23:28:48,305 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-07
+2025-06-26 23:28:48,305 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:48,305 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-07
+2025-06-26 23:28:48,320 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:49,008 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:49,008 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-07', 'adults': 1}
+Headers: {'Authorization': 'Bearer P1pmCtD8hg8ADreQYTwg88kqu44G'}
+Data: None
+Form Data: False
+2025-06-26 23:28:51,526 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-07&adults=1
+2025-06-26 23:28:51,529 - travel_agent - INFO - Found 23 flight offers
+2025-06-26 23:28:51,536 - travel_agent - INFO - Successfully retrieved 23 flight offers
+2025-06-26 23:28:51,542 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-08
+2025-06-26 23:28:51,542 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:51,542 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-08
+2025-06-26 23:28:51,542 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:52,357 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:52,357 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-08', 'adults': 1}
+Headers: {'Authorization': 'Bearer N4GGk3cYFGfMydqPBKNlI6dnxHtG'}
+Data: None
+Form Data: False
+2025-06-26 23:28:54,550 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-08&adults=1
+2025-06-26 23:28:55,194 - travel_agent - INFO - Found 25 flight offers
+2025-06-26 23:28:55,194 - travel_agent - INFO - Successfully retrieved 25 flight offers
+2025-06-26 23:28:55,194 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-09
+2025-06-26 23:28:55,194 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:55,194 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-09
+2025-06-26 23:28:55,194 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:55,972 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:55,975 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-09', 'adults': 1}
+Headers: {'Authorization': 'Bearer npen2OCfA4SOyGESrSduH7at31wt'}
+Data: None
+Form Data: False
+2025-06-26 23:28:58,315 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-09&adults=1
+2025-06-26 23:28:58,315 - travel_agent - INFO - Found 24 flight offers
+2025-06-26 23:28:58,315 - travel_agent - INFO - Successfully retrieved 24 flight offers
+2025-06-26 23:28:58,315 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-10
+2025-06-26 23:28:58,328 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:28:58,328 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-10
+2025-06-26 23:28:58,328 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:28:59,049 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:28:59,049 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-10', 'adults': 1}
+Headers: {'Authorization': 'Bearer XGHkXdF1zB81eg3qyZLGAfJyFRqg'}
+Data: None
+Form Data: False
+2025-06-26 23:29:01,259 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-10&adults=1
+2025-06-26 23:29:01,275 - travel_agent - INFO - Found 25 flight offers
+2025-06-26 23:29:01,278 - travel_agent - INFO - Successfully retrieved 25 flight offers
+2025-06-26 23:29:01,290 - travel_agent - INFO - Tool: get_flight_offers called for CCU to MAA on 2025-07-11
+2025-06-26 23:29:01,291 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:29:01,291 - travel_agent - INFO - Searching flights from CCU to MAA on 2025-07-11
+2025-06-26 23:29:01,291 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:29:02,084 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:29:02,087 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'CCU', 'destinationLocationCode': 'MAA', 'departureDate': '2025-07-11', 'adults': 1}
+Headers: {'Authorization': 'Bearer DPg3KfytFge13W4fMgzmzbVBYZbQ'}
+Data: None
+Form Data: False
+2025-06-26 23:29:04,153 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=CCU&destinationLocationCode=MAA&departureDate=2025-07-11&adults=1
+2025-06-26 23:29:04,155 - travel_agent - INFO - Found 14 flight offers
+2025-06-26 23:29:04,155 - travel_agent - INFO - Successfully retrieved 14 flight offers
+2025-06-26 23:30:39,932 - travel_agent - INFO - Tool: get_flight_offers called for HYD to COK on 2025-06-28
+2025-06-26 23:30:39,951 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:30:39,953 - travel_agent - INFO - Searching flights from HYD to COK on 2025-06-28
+2025-06-26 23:30:39,955 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:30:41,022 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:30:41,024 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'HYD', 'destinationLocationCode': 'COK', 'departureDate': '2025-06-28', 'adults': 3}
+Headers: {'Authorization': 'Bearer vGjIuYzay1Y1DGJtMloDNTg5aanv'}
+Data: None
+Form Data: False
+2025-06-26 23:30:44,367 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=HYD&destinationLocationCode=COK&departureDate=2025-06-28&adults=3
+2025-06-26 23:30:44,374 - travel_agent - INFO - Found 18 flight offers
+2025-06-26 23:30:44,376 - travel_agent - INFO - Successfully retrieved 18 flight offers
+2025-06-26 23:30:44,384 - travel_agent - INFO - Tool: get_flight_offers called for HYD to COK on 2025-06-29
+2025-06-26 23:30:44,384 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:30:44,384 - travel_agent - INFO - Searching flights from HYD to COK on 2025-06-29
+2025-06-26 23:30:44,389 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:30:45,032 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:30:45,039 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'HYD', 'destinationLocationCode': 'COK', 'departureDate': '2025-06-29', 'adults': 3}
+Headers: {'Authorization': 'Bearer JWYJfEgaAcIxjJVJlEGqRWCScTGz'}
+Data: None
+Form Data: False
+2025-06-26 23:30:48,464 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=HYD&destinationLocationCode=COK&departureDate=2025-06-29&adults=3
+2025-06-26 23:30:48,469 - travel_agent - INFO - Found 20 flight offers
+2025-06-26 23:30:48,469 - travel_agent - INFO - Successfully retrieved 20 flight offers
+2025-06-26 23:31:57,100 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:31:57,106 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Kullu-Manali', 'dt': '2025-07-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:31:57,452 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Kullu-Manali&dt=2025-07-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:31:57,452 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:31:57,468 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Kullu-Manali&dt=2025-07-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_tool_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Kullu-Manali&dt=2025-07-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:32:01,874 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:32:01,875 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Kullu-Manali', 'dt': '2025-07-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:32:02,035 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Kullu-Manali&dt=2025-07-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:32:02,035 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:32:02,035 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Kullu-Manali&dt=2025-07-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_tool_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Kullu-Manali&dt=2025-07-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:32:14,902 - travel_agent - INFO - Tool: get_flight_offers called for DEL to KUU on 2025-07-05
+2025-06-26 23:32:14,902 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:32:14,904 - travel_agent - INFO - Searching flights from DEL to KUU on 2025-07-05
+2025-06-26 23:32:14,906 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:32:15,647 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:32:15,657 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'KUU', 'departureDate': '2025-07-05', 'adults': 1}
+Headers: {'Authorization': 'Bearer MIPMkCJuuuDBO2trZAS8kAMZ0YWE'}
+Data: None
+Form Data: False
+2025-06-26 23:32:16,734 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=KUU&departureDate=2025-07-05&adults=1
+2025-06-26 23:32:16,734 - travel_agent - INFO - Found 0 flight offers
+2025-06-26 23:32:16,734 - travel_agent - INFO - Successfully retrieved 0 flight offers
+2025-06-26 23:32:16,744 - travel_agent - INFO - Tool: get_flight_offers called for DEL to KUU on 2025-07-15
+2025-06-26 23:32:16,747 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:32:16,747 - travel_agent - INFO - Searching flights from DEL to KUU on 2025-07-15
+2025-06-26 23:32:16,747 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:32:17,398 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:32:17,398 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'KUU', 'departureDate': '2025-07-15', 'adults': 1}
+Headers: {'Authorization': 'Bearer GrrsFvlI47YKeoa1G9mSSFGL7Wnn'}
+Data: None
+Form Data: False
+2025-06-26 23:32:18,454 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=KUU&departureDate=2025-07-15&adults=1
+2025-06-26 23:32:18,454 - travel_agent - INFO - Found 0 flight offers
+2025-06-26 23:32:18,454 - travel_agent - INFO - Successfully retrieved 0 flight offers
+2025-06-26 23:32:18,465 - travel_agent - INFO - Tool: get_flight_offers called for DEL to KUU on 2025-07-25
+2025-06-26 23:32:18,465 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:32:18,465 - travel_agent - INFO - Searching flights from DEL to KUU on 2025-07-25
+2025-06-26 23:32:18,465 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:32:19,148 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:32:19,148 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'KUU', 'departureDate': '2025-07-25', 'adults': 1}
+Headers: {'Authorization': 'Bearer 73XAKAAb2pNRjFF0qvmiou7MAzB2'}
+Data: None
+Form Data: False
+2025-06-26 23:32:20,121 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=KUU&departureDate=2025-07-25&adults=1
+2025-06-26 23:32:20,121 - travel_agent - INFO - Found 0 flight offers
+2025-06-26 23:32:20,121 - travel_agent - INFO - Successfully retrieved 0 flight offers
+2025-06-26 23:34:33,708 - travel_agent - INFO - Tool: get_flight_offers called for DEL to KUU on 2025-07-01
+2025-06-26 23:34:33,722 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:34:33,724 - travel_agent - INFO - Searching flights from DEL to KUU on 2025-07-01
+2025-06-26 23:34:33,724 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:34:34,761 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:34:34,766 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'KUU', 'departureDate': '2025-07-01', 'adults': 1}
+Headers: {'Authorization': 'Bearer wpvSBTCcAuOJGktrXUswmgUk3sQV'}
+Data: None
+Form Data: False
+2025-06-26 23:34:35,754 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=KUU&departureDate=2025-07-01&adults=1
+2025-06-26 23:34:35,754 - travel_agent - INFO - Found 0 flight offers
+2025-06-26 23:34:35,768 - travel_agent - INFO - Successfully retrieved 0 flight offers
+2025-06-26 23:34:35,771 - travel_agent - INFO - Tool: get_flight_offers called for DEL to KUU on 2025-07-17
+2025-06-26 23:34:35,773 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:34:35,775 - travel_agent - INFO - Searching flights from DEL to KUU on 2025-07-17
+2025-06-26 23:34:35,779 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:34:36,465 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:34:36,472 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'KUU', 'departureDate': '2025-07-17', 'adults': 1}
+Headers: {'Authorization': 'Bearer w9zKkngmsBEKANvavD5alAL4UyvQ'}
+Data: None
+Form Data: False
+2025-06-26 23:34:37,482 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=KUU&departureDate=2025-07-17&adults=1
+2025-06-26 23:34:37,482 - travel_agent - INFO - Found 0 flight offers
+2025-06-26 23:34:37,482 - travel_agent - INFO - Successfully retrieved 0 flight offers
+2025-06-26 23:34:37,482 - travel_agent - INFO - Tool: get_flight_offers called for DEL to KUU on 2025-07-31
+2025-06-26 23:34:37,482 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:34:37,482 - travel_agent - INFO - Searching flights from DEL to KUU on 2025-07-31
+2025-06-26 23:34:37,482 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:34:38,209 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:34:38,214 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'KUU', 'departureDate': '2025-07-31', 'adults': 1}
+Headers: {'Authorization': 'Bearer wJY5zQkao7a061DtLXRoAws6kxOD'}
+Data: None
+Form Data: False
+2025-06-26 23:34:39,161 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=KUU&departureDate=2025-07-31&adults=1
+2025-06-26 23:34:39,161 - travel_agent - INFO - Found 0 flight offers
+2025-06-26 23:34:39,161 - travel_agent - INFO - Successfully retrieved 0 flight offers
+2025-06-26 23:36:13,320 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:36:13,322 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Shimla', 'dt': '2025-08-15', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:36:13,726 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Shimla&dt=2025-08-15&key=fb184594e2e2401a885105921250406
+2025-06-26 23:36:13,735 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:36:13,735 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Shimla&dt=2025-08-15&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_tool_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Shimla&dt=2025-08-15&key=fb184594e2e2401a885105921250406
+2025-06-26 23:36:41,526 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:36:41,526 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Leh', 'dt': '2025-06-28', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:36:41,886 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Leh&dt=2025-06-28&key=fb184594e2e2401a885105921250406
+2025-06-26 23:36:41,886 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:36:41,900 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Leh&dt=2025-06-28&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_tool_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Leh&dt=2025-06-28&key=fb184594e2e2401a885105921250406
+2025-06-26 23:39:58,125 - travel_agent - INFO - Tool: get_hotel_offers called for PNY
+2025-06-26 23:39:58,127 - travel_agent - DEBUG - Initialized HotelService
+2025-06-26 23:39:58,129 - travel_agent - INFO - Searching hotels in PNY within 50 RadiusUnit.KM
+2025-06-26 23:39:58,129 - travel_agent - DEBUG - Searching with parameters: {'cityCode': 'PNY', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+2025-06-26 23:39:58,131 - travel_agent - DEBUG - HotelService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:39:58,994 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:39:58,996 - travel_agent - DEBUG - HotelService Request - Method: GET, Endpoint: /v1/reference-data/locations/hotels/by-city
+Params: {'cityCode': 'PNY', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+Headers: {'Authorization': 'Bearer rZGgJPghVaN7H2bWjsTpLNjTAc5v'}
+Data: None
+Form Data: False
+2025-06-26 23:40:00,121 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=PNY&radius=50&radiusUnit=KM&hotelSource=ALL
+2025-06-26 23:40:00,121 - travel_agent - DEBUG - Parsing 3 hotels
+2025-06-26 23:40:00,209 - travel_agent - INFO - Successfully retrieved 3 hotels
+2025-06-26 23:42:03,680 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:42:03,682 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Jaipur', 'dt': '2024-09-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:42:04,073 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:04,077 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:42:04,077 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:09,878 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:42:09,894 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Jaipur', 'dt': '2024-10-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:42:10,376 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:10,376 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:42:10,376 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:27,706 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:42:27,710 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Jaipur', 'dt': '2025-02-15', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:42:28,040 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2025-02-15&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:28,054 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:42:28,056 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2025-02-15&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2025-02-15&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:33,554 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:42:33,554 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Jaipur', 'dt': '2024-03-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:42:33,888 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-03-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:33,888 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:42:33,888 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-03-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jaipur&dt=2024-03-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:39,212 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:42:39,214 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Udaipur', 'dt': '2024-09-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:42:39,529 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:39,545 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:42:39,545 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:44,900 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:42:44,905 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Udaipur', 'dt': '2024-10-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:42:45,240 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:42:45,240 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:42:45,240 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:01,498 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:43:01,498 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Udaipur', 'dt': '2025-02-15', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:43:01,852 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2025-02-15&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:01,852 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:43:01,852 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2025-02-15&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2025-02-15&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:06,299 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:43:06,299 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Udaipur', 'dt': '2024-03-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:43:06,664 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-03-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:06,666 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:43:06,673 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-03-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Udaipur&dt=2024-03-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:21,818 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:43:21,819 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Jodhpur', 'dt': '2024-09-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:43:22,210 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:22,210 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:43:22,210 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-09-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:39,828 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:43:39,828 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Jodhpur', 'dt': '2024-10-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:43:40,197 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:40,199 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:43:40,199 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-10-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:46,310 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-26 23:43:46,310 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Jodhpur', 'dt': '2024-02-01', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-26 23:43:46,648 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-02-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:43:46,648 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-26 23:43:46,648 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-02-01&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Jodhpur&dt=2024-02-01&key=fb184594e2e2401a885105921250406
+2025-06-26 23:47:08,853 - travel_agent - INFO - Tool: get_flight_offers called for JTR to NBO on 2025-06-27
+2025-06-26 23:47:08,857 - travel_agent - DEBUG - Initialized FlightService
+2025-06-26 23:47:08,857 - travel_agent - INFO - Searching flights from JTR to NBO on 2025-06-27
+2025-06-26 23:47:08,871 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-26 23:47:09,843 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-26 23:47:09,845 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'JTR', 'destinationLocationCode': 'NBO', 'departureDate': '2025-06-27', 'adults': 1}
+Headers: {'Authorization': 'Bearer A5kviAcvCwIJnivapgxlr9JqaVQG'}
+Data: None
+Form Data: False
+2025-06-26 23:47:15,564 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=JTR&destinationLocationCode=NBO&departureDate=2025-06-27&adults=1
+2025-06-26 23:47:15,574 - travel_agent - INFO - Found 19 flight offers
+2025-06-26 23:47:15,574 - travel_agent - INFO - Successfully retrieved 19 flight offers
