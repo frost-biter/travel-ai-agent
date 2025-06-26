@@ -1,0 +1,117 @@
+2025-06-23 22:50:15,911 - travel_agent - INFO - Multi-Agent Travel Services Root Agent initialized successfully
+2025-06-23 22:55:47,697 - travel_agent - DEBUG - Initialized WeatherService
+2025-06-23 22:55:47,701 - travel_agent - DEBUG - WeatherService Request - Method: GET, Endpoint: /future.json
+Params: {'q': 'Almaty', 'dt': '2025-06-30', 'key': 'fb184594e2e2401a885105921250406'}
+Headers: None
+Data: None
+Form Data: False
+2025-06-23 22:55:48,115 - travel_agent - DEBUG - WeatherService Response - Status: 400
+URL: http://api.weatherapi.com/v1/future.json?q=Almaty&dt=2025-06-30&key=fb184594e2e2401a885105921250406
+2025-06-23 22:55:48,115 - travel_agent - ERROR - WeatherService Error - Status: 400
+Response: {"error":{"code":2009,"message":"API key does not have access to the resource. Please check pricing page for what is allowed in your API subscription plan."}}
+2025-06-23 22:55:48,115 - travel_agent - ERROR - WeatherService API request failed: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Almaty&dt=2025-06-30&key=fb184594e2e2401a885105921250406
+Traceback (most recent call last):
+  File "C:\Users\tempuser\OneDrive - fnmathlogic.com\GenAI Club\Google ADK Agent\Travel Agent\multi_agent_agent\services\base_client.py", line 84, in _make_request
+    response.raise_for_status()
+  File "C:\Users\tempuser\anaconda3\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://api.weatherapi.com/v1/future.json?q=Almaty&dt=2025-06-30&key=fb184594e2e2401a885105921250406
+2025-06-23 22:56:08,765 - travel_agent - INFO - Tool: get_flight_offers called for DEL to ALA on 2025-06-30
+2025-06-23 22:56:08,768 - travel_agent - DEBUG - Initialized FlightService
+2025-06-23 22:56:08,768 - travel_agent - INFO - Searching flights from DEL to ALA on 2025-06-30
+2025-06-23 22:56:08,768 - travel_agent - DEBUG - FlightService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-23 22:56:10,084 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-23 22:56:10,087 - travel_agent - DEBUG - FlightService Request - Method: GET, Endpoint: /v2/shopping/flight-offers
+Params: {'originLocationCode': 'DEL', 'destinationLocationCode': 'ALA', 'departureDate': '2025-06-30', 'adults': 1}
+Headers: {'Authorization': 'Bearer yEKivHAK9cWHGgB9YoLhQxSnNX7V'}
+Data: None
+Form Data: False
+2025-06-23 22:56:17,968 - travel_agent - DEBUG - FlightService Response - Status: 200
+URL: https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DEL&destinationLocationCode=ALA&departureDate=2025-06-30&adults=1
+2025-06-23 22:56:17,987 - travel_agent - INFO - Found 29 flight offers
+2025-06-23 22:56:17,989 - travel_agent - INFO - Successfully retrieved 29 flight offers
+2025-06-24 10:45:13,646 - travel_agent - INFO - Tool: get_hotel_offers called for ALA
+2025-06-24 10:45:13,646 - travel_agent - DEBUG - Initialized HotelService
+2025-06-24 10:45:13,656 - travel_agent - INFO - Searching hotels in ALA within 50 RadiusUnit.KM
+2025-06-24 10:45:13,663 - travel_agent - DEBUG - Searching with parameters: {'cityCode': 'ALA', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+2025-06-24 10:45:13,665 - travel_agent - DEBUG - HotelService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-24 10:45:15,375 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-24 10:45:15,376 - travel_agent - DEBUG - HotelService Request - Method: GET, Endpoint: /v1/reference-data/locations/hotels/by-city
+Params: {'cityCode': 'ALA', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+Headers: {'Authorization': 'Bearer mx2I4IhXWpHjr2rBJ3q2Mo1W70sC'}
+Data: None
+Form Data: False
+2025-06-24 10:45:16,568 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=ALA&radius=50&radiusUnit=KM&hotelSource=ALL
+2025-06-24 10:45:16,570 - travel_agent - DEBUG - Parsing 24 hotels
+2025-06-24 10:45:17,461 - travel_agent - INFO - Successfully retrieved 24 hotels
+2025-06-24 10:45:27,260 - travel_agent - INFO - Tool: get_hotel_offers called for ALA
+2025-06-24 10:45:27,261 - travel_agent - DEBUG - Initialized HotelService
+2025-06-24 10:45:27,268 - travel_agent - INFO - Searching hotels in ALA within 50 RadiusUnit.KM
+2025-06-24 10:45:27,276 - travel_agent - DEBUG - Searching with parameters: {'cityCode': 'ALA', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+2025-06-24 10:45:27,289 - travel_agent - DEBUG - HotelService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-24 10:45:27,943 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-24 10:45:27,944 - travel_agent - DEBUG - HotelService Request - Method: GET, Endpoint: /v1/reference-data/locations/hotels/by-city
+Params: {'cityCode': 'ALA', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+Headers: {'Authorization': 'Bearer L37E7G93DCdlRnOEW6zl4CRSqG1i'}
+Data: None
+Form Data: False
+2025-06-24 10:45:29,076 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=ALA&radius=50&radiusUnit=KM&hotelSource=ALL
+2025-06-24 10:45:29,077 - travel_agent - DEBUG - Parsing 24 hotels
+2025-06-24 10:45:29,448 - travel_agent - INFO - Successfully retrieved 24 hotels
+2025-06-24 10:45:38,281 - travel_agent - INFO - Tool: get_hotel_offers called for ALA
+2025-06-24 10:45:38,282 - travel_agent - DEBUG - Initialized HotelService
+2025-06-24 10:45:38,282 - travel_agent - INFO - Searching hotels in ALA within 50 RadiusUnit.KM
+2025-06-24 10:45:38,283 - travel_agent - DEBUG - Searching with parameters: {'cityCode': 'ALA', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+2025-06-24 10:45:38,283 - travel_agent - DEBUG - HotelService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-24 10:45:38,910 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-24 10:45:38,911 - travel_agent - DEBUG - HotelService Request - Method: GET, Endpoint: /v1/reference-data/locations/hotels/by-city
+Params: {'cityCode': 'ALA', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+Headers: {'Authorization': 'Bearer VZ5Cf5j8oTMzXxVdDWnExU7AdNt6'}
+Data: None
+Form Data: False
+2025-06-24 10:45:39,825 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=ALA&radius=50&radiusUnit=KM&hotelSource=ALL
+2025-06-24 10:45:39,826 - travel_agent - DEBUG - Parsing 24 hotels
+2025-06-24 10:45:40,213 - travel_agent - INFO - Successfully retrieved 24 hotels
+2025-06-24 10:45:48,183 - travel_agent - INFO - Tool: get_hotel_offers called for ALA
+2025-06-24 10:45:48,183 - travel_agent - DEBUG - Initialized HotelService
+2025-06-24 10:45:48,183 - travel_agent - INFO - Searching hotels in ALA within 50 RadiusUnit.KM
+2025-06-24 10:45:48,184 - travel_agent - DEBUG - Searching with parameters: {'cityCode': 'ALA', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+2025-06-24 10:45:48,184 - travel_agent - DEBUG - HotelService Request - Method: POST, Endpoint: /v1/security/oauth2/token
+Params: None
+Headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+Data: {'grant_type': 'client_credentials', 'client_id': '9MDAjoIUqxulaGuukbT3jxlL4JmINJgG', 'client_secret': 'ZpWeJj7Q3voFiREA'}
+Form Data: True
+2025-06-24 10:45:48,832 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/security/oauth2/token
+2025-06-24 10:45:48,833 - travel_agent - DEBUG - HotelService Request - Method: GET, Endpoint: /v1/reference-data/locations/hotels/by-city
+Params: {'cityCode': 'ALA', 'radius': 50, 'radiusUnit': 'KM', 'hotelSource': 'ALL'}
+Headers: {'Authorization': 'Bearer uXisV1zA9v5sGbxZ9XBlisfCcG6N'}
+Data: None
+Form Data: False
+2025-06-24 10:45:50,027 - travel_agent - DEBUG - HotelService Response - Status: 200
+URL: https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=ALA&radius=50&radiusUnit=KM&hotelSource=ALL
+2025-06-24 10:45:50,027 - travel_agent - DEBUG - Parsing 24 hotels
+2025-06-24 10:45:50,675 - travel_agent - INFO - Successfully retrieved 24 hotels

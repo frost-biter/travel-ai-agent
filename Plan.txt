@@ -1,0 +1,17 @@
+1. Documentation: Agentic AI Limitations, LLM Limitations.
+	The replies are not consistent. Their formats keep changing.
+
+2. Instructions to be improved. They should be open ended not flow based
+3. Reasoning Logic (Is it possible to be implanted). Does it have Self Evaluating Capabilities if yes then how?
+
+4. Merge similar functions : Done
+
+5. Web Scraping Tool to be integrated for Itineraries.
+
+6. Implement Simulate Booking
+
+7. Multiple source APIs for Flight, Also Trains, (Skyscanner)
+
+8. PPT to show the actual findings.
+
+9. Multi Agent Can be tried too.
